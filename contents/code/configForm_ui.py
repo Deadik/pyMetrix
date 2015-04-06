@@ -1,27 +1,10 @@
 # -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file '../ui/configForm.ui'
-#
-# Created: Mon Feb 22 21:26:47 2010
-#      by: PyQt4 UI code generator 4.7
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt4 import QtCore, QtGui
 
 class Ui_Dialog(object):
     def setupUi(self, Dialog):
         Dialog.setObjectName("Dialog")
         Dialog.resize(310, 163)
-        # self.lblCity = QtGui.QLabel(Dialog)
-        # self.lblCity.setGeometry(QtCore.QRect(11, 33, 41, 20))
-        # self.lblCity.setObjectName("lblCity")
-        # self.lblCountry = QtGui.QLabel(Dialog)
-        # self.lblCountry.setGeometry(QtCore.QRect(10, 70, 71, 20))
-        # self.lblCountry.setObjectName("lblCountry")
-        # self.txtCity = QtGui.QLineEdit(Dialog)
-        # self.txtCity.setGeometry(QtCore.QRect(80, 30, 171, 24))
-        # self.txtCity.setObjectName("txtCity")
 
         self.lblApiKey = QtGui.QLabel(Dialog)
         self.lblApiKey.setGeometry(QtCore.QRect(11, 33, 41, 20))
@@ -32,25 +15,30 @@ class Ui_Dialog(object):
         self.apiKey.setObjectName("apiKey")
 
         self.lblAppId = QtGui.QLabel(Dialog)
-        self.lblAppId.setGeometry(QtCore.QRect(11, 66, 41, 20))
+        self.lblAppId.setGeometry(QtCore.QRect(11, 63, 41, 20))
         self.lblAppId.setObjectName("lblAppId")
 
         self.appId = QtGui.QLineEdit(Dialog)
         self.appId.setGeometry(QtCore.QRect(80, 60, 171, 24))
         self.appId.setObjectName("appId")
 
+        self.lblTimer = QtGui.QLabel(Dialog)
+        self.lblTimer.setGeometry(QtCore.QRect(11, 93, 41, 20))
+        self.lblTimer.setObjectName("lblTimer")
 
-        # self.txtCountry = QtGui.QLineEdit(Dialog)
-        # self.txtCountry.setGeometry(QtCore.QRect(80, 70, 171, 24))
-        # self.txtCountry.setObjectName("txtCountry")
-        # self.lblUnit = QtGui.QLabel(Dialog)
-        # self.lblUnit.setGeometry(QtCore.QRect(10, 110, 41, 20))
-        # self.lblUnit.setObjectName("lblUnit")
-        # self.cmbUnit = QtGui.QComboBox(Dialog)
-        # self.cmbUnit.setGeometry(QtCore.QRect(80, 110, 81, 23))
-        # self.cmbUnit.setObjectName("cmbUnit")
-        # self.cmbUnit.addItem("")
-        # self.cmbUnit.addItem("")
+        self.timerCount = QtGui.QSpinBox(Dialog)
+        self.timerCount.setGeometry(QtCore.QRect(80, 90, 171, 24))
+        self.timerCount.setObjectName("timerCount")
+        self.timerCount.setMinimum(10)
+
+        self.lblPeriod = QtGui.QLabel(Dialog)
+        self.lblPeriod.setGeometry(QtCore.QRect(11, 123, 41, 20))
+        self.lblPeriod.setObjectName("lblPeriod")
+
+        self.period = QtGui.QSpinBox(Dialog)
+        self.period.setGeometry(QtCore.QRect(80, 120, 171, 24))
+        self.period.setObjectName("period")
+        self.period.setMinimum(7)
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -58,8 +46,6 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         Dialog.setWindowTitle(QtGui.QApplication.translate("Dialog", "Dialog", None, QtGui.QApplication.UnicodeUTF8))
         self.lblApiKey.setText(QtGui.QApplication.translate("Dialog", "apiKey:", None, QtGui.QApplication.UnicodeUTF8))
-        # self.lblCountry.setText(QtGui.QApplication.translate("Dialog", "Country:", None, QtGui.QApplication.UnicodeUTF8))
-        # self.lblUnit.setText(QtGui.QApplication.translate("Dialog", "Unit:", None, QtGui.QApplication.UnicodeUTF8))
-        # self.cmbUnit.setItemText(0, QtGui.QApplication.translate("Dialog", "Metric", None, QtGui.QApplication.UnicodeUTF8))
-        # self.cmbUnit.setItemText(1, QtGui.QApplication.translate("Dialog", "Imperial", None, QtGui.QApplication.UnicodeUTF8))
-
+        self.lblAppId.setText(QtGui.QApplication.translate("Dialog", "counterId:", None, QtGui.QApplication.UnicodeUTF8))
+        self.lblTimer.setText(QtGui.QApplication.translate("Dialog", "timeout:", None, QtGui.QApplication.UnicodeUTF8))
+        self.lblPeriod.setText(QtGui.QApplication.translate("Dialog", "Период:", None, QtGui.QApplication.UnicodeUTF8))
